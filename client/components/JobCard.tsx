@@ -3,22 +3,19 @@ import { Link } from 'react-router-dom'
 import { Job } from '../../models/job'
 
 export default function JobCard(job: Job) {
-  console.log('Job object passed to card:', job)
   return (
     <>
-      <div className="job">
+      <div className="bg-white shadow-md rounded-md border border-gray-200 overflow-hidden p-4">
+        <img src={job.logo} alt={job.company} />
+        <span className="text-gray-700">
+          {job.postedAt}
+          {job.contract}
+        </span>
         <Link to={`/${job.id}`}>
-          {/*  Add Image here, svg file howww */}
-          {/* <img className="job-icon" src={job.logo} alt={job.name} />*/}
-          <span>
-            {job.postedAt}
-            {job.contract}
-          </span>
-          <h3>{job.position}</h3>
+          <h3 className="font-bold text-xl">{job.position}</h3>
         </Link>
-        <p>{job.company}</p>
-        <p>{job.location}</p>{' '}
-        {/* Need some extra styling here this bottom text is in the purple colour */}
+        <p className="text-gray-700">{job.company}</p>
+        <p className="text-purple-700">{job.location}</p>{' '}
       </div>
     </>
   )
