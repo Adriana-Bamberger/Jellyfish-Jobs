@@ -8,8 +8,7 @@ export default function JobCard(job: Job) {
       <div className="bg-white shadow-md rounded-md border border-gray-200 overflow-hidden p-4">
         <img src={job.logo} alt={job.company} />
         <span className="text-gray-700">
-          {job.postedAt}
-          {job.contract}
+          {job.postedAt} - {job.contract}
         </span>
         <Link to={`/${job.id}`}>
           <h3 className="font-bold text-xl">{job.position}</h3>
