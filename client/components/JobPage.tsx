@@ -21,6 +21,7 @@ export default function JobPage() {
   }
 
   if (data) {
+    console.log('JobPage data: ', data)
     return (
       <>
         <main>
