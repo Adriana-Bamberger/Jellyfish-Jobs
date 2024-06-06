@@ -8,3 +8,9 @@ export function getJobs(): Promise<Job[]> {
     return res.body
   })
 }
+
+export function getJobById(id: number): Promise<Job> {
+  return request.get(rootUrl + `/jobs/${id}`).then((res) => {
+    return res.body
+  })
+}

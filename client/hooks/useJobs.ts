@@ -4,7 +4,7 @@ import {
   useQueryClient,
   MutationFunction,
 } from '@tanstack/react-query'
-import { getJobs } from '../apis/jobs.ts'
+import { getJobById, getJobs } from '../apis/jobs.ts'
 
 export function useJobs() {
   const query = useQuery({ queryKey: ['jobs'], queryFn: getJobs })
@@ -32,3 +32,12 @@ export function useJobsMutation<TData = unknown, TVariables = unknown>(
 /* function useAddFruit() {
   return useFruitsMutation(addFruit)
 } */
+export function useJobById(id: number) {
+  const query = useQuery({
+    queryKey: ['job', id],
+    queryFn: () => getJobById(id),
+  })
+  return {
+    ...query,
+  }
+}
