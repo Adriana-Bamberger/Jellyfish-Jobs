@@ -34,3 +34,6 @@ Day night toggle.
 Filter by location.
 Tick box for full time only.
 Pagination?
+
+
+npx tailwindcss -i ./client/styles/tailwind.css -o ./client/styles/index.css --watch
