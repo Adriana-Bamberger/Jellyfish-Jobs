@@ -9,7 +9,7 @@ export async function seed(knex) {
     {
       id: 1,
       company: 'Scoot',
-      logo: './assets/logos/scoot.svg',
+      logo: './images/logos/scoot.svg',
       logo_background: 'hsl(36, 87%, 49%)',
       position: 'Senior Software Engineer',
       posted_at: '5h ago',
@@ -43,7 +43,7 @@ export async function seed(knex) {
     {
       id: 2,
       company: 'Blogr',
-      logo: './assets/logos/blogr.svg',
+      logo: './images/logos/blogr.svg',
       logo_background: 'hsl(12, 79%, 52%)',
       position: 'Haskell and PureScript Dev',
       posted_at: '20h ago',
@@ -77,7 +77,7 @@ export async function seed(knex) {
     {
       id: 3,
       company: 'Vector',
-      logo: './assets/logos/vector.svg',
+      logo: './images/logos/vector.svg',
       logo_background: 'hsl(235, 10%, 23%)',
       position: 'Midlevel Back End Engineer',
       posted_at: '1d ago',
@@ -110,7 +110,7 @@ export async function seed(knex) {
     {
       id: 4,
       company: 'Office Lite',
-      logo: './assets/logos/officelite.svg',
+      logo: './images/logos/officelite.svg',
       logo_background: 'hsl(227, 62%, 48%)',
       position: 'Senior Application Engineer',
       posted_at: '2d ago',
@@ -145,7 +145,7 @@ export async function seed(knex) {
     {
       id: 5,
       company: 'Pod',
-      logo: './assets/logos/pod.svg',
+      logo: './images/logos/pod.svg',
       logo_background: 'hsl(216, 46%, 14%)',
       position: 'Remote DevOps Engineer',
       posted_at: '2d ago',
@@ -184,7 +184,7 @@ export async function seed(knex) {
     {
       id: 6,
       company: 'Creative',
-      logo: './assets/logos/creative.svg',
+      logo: './images/logos/creative.svg',
       logo_background: 'hsl(295, 55%, 21%)',
       position: 'Desktop Support Manager',
       posted_at: '4d ago',
@@ -221,7 +221,7 @@ export async function seed(knex) {
     {
       id: 7,
       company: 'Pomodoro',
-      logo: './assets/logos/pomodoro.svg',
+      logo: './images/logos/pomodoro.svg',
       logo_background: 'hsl(254, 71%, 45%)',
       position: 'iOS Engineer',
       posted_at: '1w ago',
@@ -255,7 +255,7 @@ export async function seed(knex) {
     {
       id: 8,
       company: 'Maker',
-      logo: './assets/logos/maker.svg',
+      logo: './images/logos/maker.svg',
       logo_background: 'hsl(218, 58%, 31%)',
       position: 'Senior EJB Developer',
       posted_at: '1w ago',
@@ -289,7 +289,7 @@ export async function seed(knex) {
     {
       id: 9,
       company: 'Coffeeroasters',
-      logo: './assets/logos/coffeeroasters.svg',
+      logo: './images/logos/coffeeroasters.svg',
       logo_background: 'hsl(29, 60%, 87%)',
       position: 'Senior Frontend Developer',
       posted_at: '1w ago',
@@ -323,7 +323,7 @@ export async function seed(knex) {
     {
       id: 10,
       company: 'Mastercraft',
-      logo: './assets/logos/mastercraft.svg',
+      logo: './images/logos/mastercraft.svg',
       logo_background: 'hsl(0, 0%, 12%)',
       position: 'App & Website Designer',
       posted_at: '2w ago',
@@ -359,7 +359,7 @@ export async function seed(knex) {
     {
       id: 11,
       company: 'Crowdfund',
-      logo: './assets/logos/crowdfund.svg',
+      logo: './images/logos/crowdfund.svg',
       logo_background: 'hsl(157, 57%, 50%)',
       position: 'Fullstack Developer',
       posted_at: '1mo ago',
@@ -395,7 +395,7 @@ export async function seed(knex) {
     {
       id: 12,
       company: 'Typemaster',
-      logo: './assets/logos/typemaster.svg',
+      logo: './images/logos/typemaster.svg',
       logo_background: 'hsl(22, 89%, 52%)',
       position: 'Technical Lead Engineer',
       posted_at: '1mo ago',
@@ -430,7 +430,7 @@ export async function seed(knex) {
     {
       id: 13,
       company: 'Crowdfund',
-      logo: './assets/logos/crowdfund.svg',
+      logo: './images/logos/crowdfund.svg',
       logo_background: 'hsl(157, 57%, 50%)',
       position: 'Front-end Developer',
       posted_at: '1mo ago',
@@ -465,7 +465,7 @@ export async function seed(knex) {
     {
       id: 14,
       company: 'Coffeeroasters',
-      logo: './assets/logos/coffeeroasters.svg',
+      logo: './images/logos/coffeeroasters.svg',
       logo_background: 'hsl(29, 60%, 87%)',
       position: 'Junior Full-Stack Developer',
       posted_at: '1mo ago',
@@ -500,7 +500,7 @@ export async function seed(knex) {
     {
       id: 15,
       company: 'Blogr',
-      logo: './assets/logos/blogr.svg',
+      logo: './images/logos/blogr.svg',
       logo_background: 'hsl(12, 79%, 52%)',
       position: 'Midweight Front-end Developer',
       posted_at: '1mo ago',
