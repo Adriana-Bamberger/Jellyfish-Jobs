@@ -1,20 +1,23 @@
 import { useJobs } from '../hooks/useJobs.ts'
-import Footer from './Footer.tsx'
-import Header from './Header.tsx'
 
 function App() {
-  const { data } = useJobs()
+  const { data, isLoading, isError } = useJobs()
+
+  if (isLoading) {
+    return <p>Loading data...</p>
+  }
+
+  if (isError) {
+    return <p>Error...</p>
+  }
 
   return (
     <>
       <div className="app">
-        <Header />
-
+        <h1>Fullstack Boilerplate - with Fruits!</h1>
         <ul>
           {data && data.map((job) => <li key={job.id}>{job.company}</li>)}
         </ul>
-
-        <Footer />
       </div>
     </>
   )
