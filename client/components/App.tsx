@@ -1,4 +1,6 @@
 import { useJobs } from '../hooks/useJobs.ts'
+import Footer from './Footer.tsx'
+import Header from './Header.tsx'
 
 function App() {
   const { data } = useJobs()
@@ -6,10 +8,13 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
+        <Header />
+
         <ul>
           {data && data.map((job) => <li key={job.id}>{job.company}</li>)}
         </ul>
+
+        <Footer />
       </div>
     </>
   )
