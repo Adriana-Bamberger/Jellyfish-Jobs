@@ -18,3 +18,6 @@ coverage/*
 
 # Build directory
 /dist
+
+# Mac files
+.DS_Store
