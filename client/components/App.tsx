@@ -12,13 +12,14 @@ function App() {
     return <p>Error...</p>
   }
 
-  console.log(data)
-
   return (
     <>
       <div className="app">
-        <h1>Dev Job Board</h1>
-        {data && data.map((job) => <JobCard key={job.id} {...job} />)}
+        <div className="header">This is the header</div>
+        <div className="mt-6 grid grid-cols-1 gap-x-6">
+          {data && data.map((job) => <JobCard key={job.id} {...job} />)}
+        </div>
+        <div className="footer">This is the footer</div>
       </div>
     </>
   )
