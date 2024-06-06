@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Job } from '../../models/job'
 
 export default function JobCard(job: Job) {
+  console.log('Job object passed to card:', job)
   return (
     <>
       <div className="job">
