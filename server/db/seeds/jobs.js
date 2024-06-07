@@ -10,7 +10,7 @@ export async function seed(knex) {
       id: 1,
       company: 'Scoot',
       logo: './images/logos/scoot.svg',
-      logo_background: 'hsl(36, 87%, 49%)',
+      logo_background: 'hsl(36,87%,49%)',
       position: 'Senior Software Engineer',
       posted_at: '5h ago',
       contract: 'Full Time',
