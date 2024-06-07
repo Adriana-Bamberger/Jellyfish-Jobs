@@ -17,16 +17,13 @@ function App() {
   }
 
   if (data) {
-    let filteredData
-    // if (searchItem !== '') {
-
-    // }
-    filteredData = data.filter((job) => {
+    const filteredData = data.filter((job) => {
       return job.position.toLowerCase().includes(searchItem.toLowerCase())
     })
+    console.log(searchItem)
     return (
       <>
-        <SearchBar setSearchItem={setSearchItem}/>
+        <SearchBar setSearchItem={setSearchItem} />
         <div className="app">
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
             {filteredData &&
