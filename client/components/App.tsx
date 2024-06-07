@@ -26,14 +26,12 @@ function App() {
     })
     return (
       <>
-        <SearchBar />
+        <SearchBar setSearchItem={setSearchItem}/>
         <div className="app">
-          <div className="header">This is the header</div>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
             {filteredData &&
               filteredData.map((job) => <JobCard key={job.id} {...job} />)}
           </div>
-          <div className="footer">This is the footer</div>
         </div>
       </>
     )
