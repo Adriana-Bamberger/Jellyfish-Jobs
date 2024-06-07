@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 
 interface Props {
   setSearchItem: Dispatch<SetStateAction<string>>
@@ -6,14 +6,18 @@ interface Props {
 
 export function SearchBar(props: Props) {
   const { setSearchItem } = props
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const searchTerm = e.target.value
     setSearchItem(searchTerm)
   }
 
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+  }
+
   return (
     <>
-      <form className="max-w-md mx-auto">
+      <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -43,7 +47,7 @@ export function SearchBar(props: Props) {
             id="default-search"
             className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search Job Title..."
-
+            onChange={handleChange}
             required
           />
           <button

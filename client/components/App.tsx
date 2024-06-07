@@ -17,13 +17,13 @@ function App() {
   }
 
   if (data) {
-    let filteredData
-    // if (searchItem !== '') {
-
-    // }
-    filteredData = data.filter((job) => {
-      return job.position.toLowerCase().includes(searchItem.toLowerCase())
+    const filteredData = data.filter((job) => {
+      return Object.values(job)
+        .join(' ')
+        .toLowerCase()
+        .includes(searchItem.toLowerCase())
     })
+    console.log(searchItem)
     return (
       <>
         <SearchBar setSearchItem={setSearchItem} />
