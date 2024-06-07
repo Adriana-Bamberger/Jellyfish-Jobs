@@ -20,8 +20,11 @@ export default function JobPage() {
       <>
         <main>
           <div className="min-w-0 flex-1">
-            {data.logo}
-            {data.logoBackground}
+            <div className="bg-red-50 h-16 w-16">
+              <img src={data.logo} alt={data.company} className="h-16" />
+            </div>
+            {/* {data.logoBackground}
+            {data.logo} */}
           </div>
           <div className="lg:flex lg:items-center">
             <div className="min-w-0 flex-1">
