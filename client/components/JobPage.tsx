@@ -15,13 +15,16 @@ export default function JobPage() {
   }
 
   if (data) {
-    console.log('JobPage data: ', data)
+    // console.log('JobPage data: ', data)
     return (
       <>
         <main>
           <div className="min-w-0 flex-1">
-            <div className="bg-red-50 h-16 w-16">
-              <img src={data.logo} alt={data.company} className="h-16" />
+            <div
+              className="rounded-md h-16 w-16 flex items-center justify-center p-1"
+              style={{ backgroundColor: data.logoBackground }}
+            >
+              <img src={data.logo} alt={data.company} className="w-16" />
             </div>
             {/* {data.logoBackground}
             {data.logo} */}
@@ -52,7 +55,7 @@ export default function JobPage() {
               {data.postedAt} * {data.contract}
             </p>
           </div>
-          <div>
+          <div className="flex">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {data.position}
             </h1>
@@ -61,22 +64,28 @@ export default function JobPage() {
                 <p>Apply</p>
               </button>
             </div>
-            <p className="mt-2 text-m text-purple-700 font-semibold">
-              {data.location}
-            </p>
           </div>
+          <p className="mt-2 text-m text-purple-700 font-semibold">
+            {data.location}
+          </p>
           <div className="mt-4 grid grid-cols-1 gap-y-4 sm:grid-cols-1 sm:gap-y-4">
             <p className="mt-2 text-sm text-gray-500">{data.description}</p>
             <h3 className="font-medium text-gray-900">Requirements</h3>
             <p className="mt-2 text-sm text-gray-500">
               {data.requirements.content}
             </p>
-            <p className="mt-2 text-sm text-gray-500">
-              {data.requirements.items}
-            </p>
+            <ul>
+              {data.requirements.items.map((item, index) => {
+                return <li key={index}>{item}</li>
+              })}
+            </ul>
             <h3 className="font-medium text-gray-900">What You Will Do</h3>
             <p className="mt-2 text-sm text-gray-500">{data.role.content}</p>
-            <p className="mt-2 text-sm text-gray-500">{data.role.items}</p>
+            <ul>
+              {data.role.items.map((item, index) => {
+                return <li key={index}>{item}</li>
+              })}
+            </ul>
           </div>
           <div>
             <p className="mt-2 text-sm text-gray-500">{data.company}</p>
