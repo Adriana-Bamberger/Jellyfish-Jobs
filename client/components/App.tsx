@@ -5,7 +5,6 @@ import { SearchBar } from './SearchBar.tsx'
 
 function App() {
   const [searchItem, setSearchItem] = useState('')
-  // const [filteredJobs, setFilteredJobs] = useState<Job[]>()
   const { data, isLoading, isError } = useJobs()
 
   if (isLoading) {
@@ -23,7 +22,6 @@ function App() {
         .toLowerCase()
         .includes(searchItem.toLowerCase())
     })
-    console.log(searchItem)
     return (
       <>
         <SearchBar setSearchItem={setSearchItem} />
