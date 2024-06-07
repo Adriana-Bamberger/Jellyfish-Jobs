@@ -37,6 +37,11 @@ function Header() {
         {/* Text Overlay */}
         <div className="absolute top-10 left-10 w-full text-left z-10">
           <span className="text-white text-5xl font-bold">jellyfish jobs</span>
+          <img
+            src="../images/desktop/jellyfish_boss.png"
+            alt=""
+            className="w-48 absolute top-0 left-96 w-full text-left z-10"
+          ></img>
         </div>
       </div>
     </header>
