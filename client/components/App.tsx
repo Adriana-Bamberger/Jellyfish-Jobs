@@ -1,7 +1,11 @@
+import { useState } from 'react'
 import { useJobs } from '../hooks/useJobs.ts'
 import JobCard from './JobCard.tsx'
+import { SearchBar } from './SearchBar.tsx'
 
 function App() {
+  const [searchItem, setSearchItem] = useState('')
+  // const [filteredJobs, setFilteredJobs] = useState<Job[]>()
   const { data, isLoading, isError } = useJobs()
 
   if (isLoading) {
@@ -12,16 +16,26 @@ function App() {
     return <p>Error...</p>
   }
 
-  return (
-    <>
-      <div className="app">
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {data && data.map((job) => <JobCard key={job.id} {...job} />)}
+  if (data) {
+    let filteredData
+    // if (searchItem !== '') {
+
+    // }
+    filteredData = data.filter((job) => {
+      return job.position.toLowerCase().includes(searchItem.toLowerCase())
+    })
+    return (
+      <>
+        <SearchBar setSearchItem={setSearchItem}/>
+        <div className="app">
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+            {filteredData &&
+              filteredData.map((job) => <JobCard key={job.id} {...job} />)}
+          </div>
         </div>
-        <div className="footer"></div>
-      </div>
-    </>
-  )
+      </>
+    )
+  }
 }
 
 export default App

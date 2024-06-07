@@ -5,11 +5,9 @@ import Header from './Header.tsx'
 export default function Layout() {
   return (
     <>
-      <div id="page-container">
+      <div id="page-container" className="mx-auto max-w-7xl px-6">
         <Header />
-
         <Outlet />
-
         <Footer />
       </div>
     </>

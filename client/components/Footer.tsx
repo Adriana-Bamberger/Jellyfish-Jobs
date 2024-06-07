@@ -1,15 +1,15 @@
 function Footer() {
   return (
     <>
-      <footer>
+      <footer className="mx-auto max-w-7xl px-6">
         <div>
           <svg
-            width="1024"
+            width="100%"
             height="261"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect y="1" width="730" height="259" rx="6" fill="#5964E0" />
+            <rect y="1" width="100%" height="259" rx="6" fill="#5964E0" />
             <mask
               id="a"
               maskUnits="userSpaceOnUse"
@@ -18,7 +18,7 @@ function Footer() {
               width="730"
               height="259"
             >
-              <rect y="1" width="730" height="259" rx="6" fill="#fff" />
+              <rect y="1" width="100%" height="259" rx="6" fill="#fff" />
             </mask>
             <g mask="url(#a)">
               <path
