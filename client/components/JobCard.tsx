@@ -2,19 +2,16 @@ import { Link } from 'react-router-dom'
 import { Job } from '../../models/job'
 
 export default function JobCard(job: Job) {
-  const dynamicBackgroundColor = `bg-[${job.logoBackground}]`
-
   return (
     <>
       <div
         className={`bg-white shadow-md rounded-md border border-gray-200 overflow-hidden p-4`}
       >
-        <div className={`${dynamicBackgroundColor} rounded-md h-16 w-16`}>
-          <img
-            src={job.logo}
-            alt={job.company}
-            className="w-16 rounded-md justify-center items-center"
-          />
+        <div
+          className="rounded-md h-16 w-16 flex items-center justify-center p-1"
+          style={{ backgroundColor: job.logoBackground }}
+        >
+          <img src={job.logo} alt={job.company} className="w-16 rounded-md" />
         </div>
         <span className="text-gray-700">
           {job.postedAt} - {job.contract}
