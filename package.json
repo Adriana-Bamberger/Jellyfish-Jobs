@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "color": "^4.2.3",
     "express": "^4.17.2",
     "knex": "^2.5.1",
     "sqlite3": "^5.1.6",
