@@ -25,6 +25,3 @@ export default function JobCard(job: Job) {
     </>
   )
 }
-
-// const bgColor = 'bg-[color:' + job.logoBackground + ']'
-// const imgBgColor = '{job.logoBackground}'
