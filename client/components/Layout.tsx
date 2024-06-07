@@ -7,7 +7,9 @@ export default function Layout() {
     <>
       <div id="page-container">
         <Header />
+
         <Outlet />
+
         <Footer />
       </div>
     </>
