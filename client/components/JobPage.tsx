@@ -55,16 +55,43 @@ export default function JobPage() {
               {data.postedAt} * {data.contract}
             </p>
           </div>
-          <div className="flex">
+          {/* <div className="flex">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {data.position}
             </h1>
-            <div className="min-w-0 flex-1">
-              <button className="items-center rounded-md bg-indigo-600 px-1 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                <p>Apply</p>
-              </button>
+            <div className="mt-5 flex lg:ml-4 lg:mt-0">
+              <span className="sm:ml-3">
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-md bg-indigo-300 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  <p>Apply</p>
+                </button>
+              </span>
+            </div> */}
+          {/* </div> */}
+          <div className="min-w-0 flex-1">
+            <div className="lg:flex ">
+              <div className="min-w-0 flex-1">
+                <h2 className="font-lg text-xl text-purple-900">
+                  {data.company}
+                </h2>
+                <p className="mt-2 text-sm text-gray-500">{data.website}</p>
+                <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6"></div>
+              </div>
+              <div className="mt-5 flex lg:ml-4 lg:mt-0 flex-1 justify-end">
+                <span className="sm:ml-3">
+                  <button
+                    type="button"
+                    className="inline-flex items-center rounded-md bg-indigo-300 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    <p>Apply</p>
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
+
           <p className="mt-2 text-m text-purple-700 font-semibold">
             {data.location}
           </p>
