@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Job } from '../../models/job'
 
 export default function JobCard(job: Job) {
-  const dynamicBackgroundColor = `bg-${job.logoBackground}`
+  const dynamicBackgroundColor = `bg-[${job.logoBackground}]`
 
   return (
     <>
@@ -28,6 +28,3 @@ export default function JobCard(job: Job) {
     </>
   )
 }
-
-// const bgColor = 'bg-[color:' + job.logoBackground + ']'
-// const imgBgColor = '{job.logoBackground}'
