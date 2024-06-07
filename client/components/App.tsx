@@ -18,7 +18,10 @@ function App() {
 
   if (data) {
     const filteredData = data.filter((job) => {
-      return job.position.toLowerCase().includes(searchItem.toLowerCase())
+      return Object.values(job)
+        .join(' ')
+        .toLowerCase()
+        .includes(searchItem.toLowerCase())
     })
     console.log(searchItem)
     return (
