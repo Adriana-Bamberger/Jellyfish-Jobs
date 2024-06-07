@@ -52,24 +52,10 @@ export default function JobPage() {
           </div>
           <div className="mt-16 grid grid-cols-1 gap-x-1 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
             <p className="mt-2 text-sm text-gray-500">
-              {data.postedAt} * {data.contract}
+              {data.postedAt} <span className="p-2"> • </span> {data.contract}
             </p>
           </div>
-          {/* <div className="flex">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              {data.position}
-            </h1>
-            <div className="mt-5 flex lg:ml-4 lg:mt-0">
-              <span className="sm:ml-3">
-                <button
-                  type="button"
-                  className="inline-flex items-center rounded-md bg-indigo-300 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  <p>Apply</p>
-                </button>
-              </span>
-            </div> */}
-          {/* </div> */}
+
           <div className="min-w-0 flex-1">
             <div className="lg:flex ">
               <div className="min-w-0 flex-1">
@@ -103,21 +89,35 @@ export default function JobPage() {
             </p>
             <ul>
               {data.requirements.items.map((item, index) => {
-                return <li key={index}>{item}</li>
+                return (
+                  <li
+                    className="mt-2 text-sm text-gray-500 list-disc"
+                    key={index}
+                  >
+                    {item}
+                  </li>
+                )
               })}
             </ul>
             <h3 className="font-medium text-gray-900">What You Will Do</h3>
             <p className="mt-2 text-sm text-gray-500">{data.role.content}</p>
             <ul>
               {data.role.items.map((item, index) => {
-                return <li key={index}>{item}</li>
+                return (
+                  <li
+                    className="mt-2 text-sm text-gray-500 list-disc"
+                    key={index}
+                  >
+                    {item}
+                  </li>
+                )
               })}
             </ul>
           </div>
-          <div>
-            <p className="mt-2 text-sm text-gray-500">{data.company}</p>
-            <h3>{data.position}</h3>
-            <button className="inline-flex items-center rounded-md bg-indigo-600 px-1 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <div className="absolute bot-5 w-full text-left z-10">
+            <p className=" mt-10 ml-10 text-sm text-gray-100">{data.company}</p>
+            <h3 className="font-medium text-gray-900 ml-10">{data.position}</h3>
+            <button className="inline-flex ml-10 mt-2 rounded-md bg-indigo-300 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               <p>Apply</p>
             </button>
           </div>
