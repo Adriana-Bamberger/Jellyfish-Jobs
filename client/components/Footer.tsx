@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="mx-auto max-w-7xl px-6">
+      <footer className="mx-auto max-w-7xl px-6 mt-5">
         <div>
           <svg
             width="100%"

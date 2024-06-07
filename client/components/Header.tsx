@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="relative mb-10">
+    <header className="relative mb-5">
       <div className="w-full">
         {/* SVG Image */}
         <svg
