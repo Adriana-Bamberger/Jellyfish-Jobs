@@ -11,8 +11,7 @@ export default function JobCard(job: Job) {
           <img src={job.logo} alt={job.company} className="h-16" />
         </div>
         <span className="text-gray-700">
-          {job.postedAt}
-          {job.contract}
+          {job.postedAt} - {job.contract}
         </span>
         <Link to={`/${job.id}`}>
           <h3 className="font-bold text-xl">{job.position}</h3>
