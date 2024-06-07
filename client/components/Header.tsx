@@ -42,6 +42,21 @@ function Header() {
             alt=""
             className="w-48 absolute top-0 left-96 w-full text-left z-10"
           ></img>
+          <img
+            src="../images/desktop/jellyfish_boss.png"
+            alt=""
+            className="w-24 absolute top-0 left-72 w-full text-left z-10"
+          ></img>
+          <img
+            src="../images/desktop/jellyfish_boss.png"
+            alt=""
+            className="w-40 absolute top--2 right-80 w-full text-left z-10"
+          ></img>
+          <img
+            src="../images/desktop/jellyfish_boss.png"
+            alt=""
+            className="w-24 absolute top-0 right-24 w-full text-left z-10"
+          ></img>
         </div>
       </div>
     </header>
