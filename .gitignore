@@ -21,3 +21,6 @@ coverage/*
 
 # Mac files
 .DS_Store
+
+#css auto
+/client/styles/index.css

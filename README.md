@@ -77,3 +77,6 @@ Alex and Adriana mannaged to make the component for adding a new job.
 1) TAILWIND
 2) How to work against design file from someone else.
 
+
+
+npx tailwindcss -i ./client/styles/tailwind.css -o ./client/styles/index.css --watch

@@ -1,16 +1,39 @@
-import { useFruits } from '../hooks/useFruits.ts'
+import { useState } from 'react'
+import { useJobs } from '../hooks/useJobs.ts'
+import JobCard from './JobCard.tsx'
+import { SearchBar } from './SearchBar.tsx'
 
 function App() {
-  const { data } = useFruits()
+  const [searchItem, setSearchItem] = useState('')
+  const { data, isLoading, isError } = useJobs()
 
-  return (
-    <>
-      <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
-      </div>
-    </>
-  )
+  if (isLoading) {
+    return <p>Loading data...</p>
+  }
+
+  if (isError) {
+    return <p>Error...</p>
+  }
+
+  if (data) {
+    const filteredData = data.filter((job) => {
+      return Object.values(job)
+        .join(' ')
+        .toLowerCase()
+        .includes(searchItem.toLowerCase())
+    })
+    return (
+      <>
+        <SearchBar setSearchItem={setSearchItem} />
+        <div className="app">
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+            {filteredData &&
+              filteredData.map((job) => <JobCard key={job.id} {...job} />)}
+          </div>
+        </div>
+      </>
+    )
+  }
 }
 
 export default App

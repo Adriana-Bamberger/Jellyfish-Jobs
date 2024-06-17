@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "color": "^4.2.3",
     "express": "^4.17.2",
     "knex": "^2.5.1",
     "sqlite3": "^5.1.6",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@devacademy/eslint-config": "^1.10.1",
+    "@svgr/webpack": "^8.1.0",
     "@tanstack/eslint-plugin-query": "^5.12.2",
     "@tanstack/react-query": "^5.12.2",
     "@tanstack/react-query-devtools": "^5.13.3",
@@ -43,6 +45,7 @@
     "@types/superagent": "^8.1.1",
     "@types/supertest": "^6.0.2",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
     "esbuild": "^0.18.19",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
@@ -54,6 +57,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "jsdom": "^22.1.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.38",
     "react": "^18.0.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
