@@ -5,7 +5,7 @@ import {
   MutationFunction,
 } from '@tanstack/react-query'
 import { getJobById, getJobs } from '../apis/jobs.ts'
-import { JobData } from '../../models/job.ts'
+import { Job, JobData } from '../../models/job.ts'
 import request from 'superagent'
 
 export function useJobs() {
@@ -55,6 +55,21 @@ export function useCreateJob() {
     },
     onSuccess: () => {
       client.invalidateQueries({ queryKey: ['jobs'] })
+    },
+  })
+}
+
+export function useUpdateJob(id: number) {
+  const client = useQueryClient()
+
+  return useMutation({
+    mutationFn: async (job: Job) => {
+      //   console.log(job)
+      const res = await request.patch(`/api/v1/jobs/${id}`).send(job)
+      return res.body
+    },
+    onSuccess: () => {
+      client.invalidateQueries({ queryKey: ['job', id] })
     },
   })
 }

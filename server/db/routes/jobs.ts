@@ -42,3 +42,11 @@ export async function getJobById(id: number): Promise<dbJob> {
 export async function addNewJob(newJobData: dbJobData): Promise<number> {
   return db('jobs').insert({ ...newJobData }, ['id'])
 }
+
+export async function updateJob(JobData: dbJob): Promise<number> {
+  const { id, ...newJobData } = JobData
+  //   console.log(`updateJob: ${id}`, newJobData)
+  return db('jobs')
+    .where({ id })
+    .update({ ...newJobData })
+}

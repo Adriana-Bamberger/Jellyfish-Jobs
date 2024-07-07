@@ -2,7 +2,7 @@ import { Router } from 'express'
 
 import * as db from '../db/routes/jobs.ts'
 
-import { Job, JobData, dbJobData } from '../../models/job.ts'
+import { dbJob, dbJobData } from '../../models/job.ts'
 
 const router = Router()
 
@@ -55,6 +55,25 @@ router.post('/', async (req, res) => {
     }
     const newJobId = await db.addNewJob(newJobRecord)
     res.json(newJobId)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: 'Something went wrong' })
+  }
+})
+
+router.patch('/:id', async (req, res) => {
+  //   console.log('Job route: ', req.body)
+  try {
+    const { requirements, role, logoBackground, postedAt, ...rest } = req.body
+    const newJobRecord: dbJob = {
+      ...rest,
+      logo_background: logoBackground,
+      posted_at: postedAt,
+      requirements: JSON.stringify(requirements),
+      role: JSON.stringify(role),
+    }
+    const recordsUpdated = await db.updateJob(newJobRecord)
+    res.json(recordsUpdated)
   } catch (error) {
     console.log(error)
     res.status(500).json({ message: 'Something went wrong' })

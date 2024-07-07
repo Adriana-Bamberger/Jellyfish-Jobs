@@ -1,8 +1,10 @@
 import { useJobById } from '../hooks/useJobs'
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function JobPage() {
   const params = useParams()
+  const navigate = useNavigate()
   const id = Number(params.id)
   const { data, isLoading, isError } = useJobById(id)
 
@@ -72,6 +74,13 @@ export default function JobPage() {
                     className="inline-flex items-center rounded-md bg-indigo-300 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     <p>Apply</p>
+                  </button>
+                  <button
+                    type="button"
+                    className="inline-flex items-center rounded-md bg-indigo-300 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    onClick={() => navigate(`/${id}/edit`)}
+                  >
+                    <p>Edit</p>
                   </button>
                 </span>
               </div>
