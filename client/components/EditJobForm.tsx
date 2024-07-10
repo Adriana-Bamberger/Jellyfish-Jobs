@@ -116,16 +116,6 @@ export default function EditJobForm(job: Job) {
             onChange={handleChange}
           />
         </div>
-        <div className="form-item">
-          <label htmlFor="position">Position: </label>
-          <input
-            type="text"
-            name="position"
-            id="position"
-            value={formState.position}
-            onChange={handleChange}
-          />
-        </div>
         <button
           data-pending={updateJob.isPending}
           className="w-[128px] p-[2px] *:text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
