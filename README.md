@@ -6,12 +6,11 @@ Vibes: Aimee.
 PO: Bevan.
 
 # Our MVP
-Making desktop Only.
-From our premade design file in Figma.
-Images made.
-Read-me File.
+Making desktop version only.
+Using our premade design file in Figma.
+Images in Figma ready to import.
 
-Work component by component, talk about what you're doing 
+Working component by component, constantly sharing what we're doing.
 
 ## MVP
 ### Components:
